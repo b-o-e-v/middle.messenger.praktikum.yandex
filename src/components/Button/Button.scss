@@ -13,8 +13,8 @@
   padding: 0;
   cursor: pointer;
   transition: background-color linear .2s;
-}
 
-.button:hover {
-  background-color: #cbcb00;
+  &:hover {
+    background-color: #cbcb00;
+  }
 }

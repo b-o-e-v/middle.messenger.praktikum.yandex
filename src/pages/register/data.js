@@ -1,43 +1,52 @@
-export const registerInputsData = [
-  {
-    title: 'first name',
-    name: 'first_name',
-    type: 'text',
-    required: true
+export const data = {
+  form: {
+    id: 'signup',
+    title: 'SIGN UP'
   },
-  {
-    title: 'second name',
-    name: 'second_name',
-    type: 'text',
-    required: true
+  inputs: [
+    {
+      title: 'first name',
+      name: 'first_name',
+      type: 'text',
+      required: true
+    },
+    {
+      title: 'second name',
+      name: 'second_name',
+      type: 'text',
+      required: true
+    },
+    {
+      title: 'email',
+      name: 'email',
+      type: 'text',
+      required: true
+    },
+    {
+      title: 'phone',
+      name: 'phone',
+      type: 'tel',
+      required: true
+    },
+    {
+      title: 'login',
+      name: 'login',
+      type: 'text',
+      required: true
+    },
+    {
+      title: 'password',
+      name: 'password',
+      type: 'password',
+      required: true
+    }
+  ],
+  button: {
+    text: 'SIGN UP',
+    type: 'submit'
   },
-  {
-    title: 'email',
-    name: 'email',
-    type: 'text',
-    required: true
-  },
-  {
-    title: 'phone',
-    name: 'phone',
-    type: 'tel',
-    required: true
-  },
-  {
-    title: 'login',
-    name: 'login',
-    type: 'text',
-    required: true
-  },
-  {
-    title: 'password',
-    name: 'password',
-    type: 'password',
-    required: true
+  link: {
+    text: 'SIGN IN',
+    url: '/login'
   }
-]
-
-export const registerButtonData = {
-  text: 'SIGN UP',
-  type: 'submit'
 }

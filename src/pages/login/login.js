@@ -1,8 +1,7 @@
-import { render } from 'pug';
-import { template } from './login.tmpl'
+import { render } from 'pug'
+import { template as LoginPage } from '../../components/Form/Form.tmpl'
+import { data as loginData } from './data'
 
-import './login.scss'
-
-export default function LoginPage() {
-  return render(template)
+export default function Login() {
+  return render(LoginPage(loginData))
 }

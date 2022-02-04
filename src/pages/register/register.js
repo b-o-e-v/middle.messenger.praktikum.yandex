@@ -1,8 +1,7 @@
-import { render } from 'pug';
-import { template } from './register.tmpl'
+import { render } from 'pug'
+import { template as RegisterPage } from '../../components/Form/Form.tmpl'
+import { data as registerData } from './data'
 
-import './register.scss'
-
-export default function registerPage() {
-  return render(template)
+export default function Register() {
+  return render(RegisterPage(registerData))
 }
