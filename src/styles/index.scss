@@ -1,0 +1,15 @@
+@import "./colors";
+@import "./fonts.scss";
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  background-color: $background;
+  font-family: 'Lato';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $text_light;
+}
