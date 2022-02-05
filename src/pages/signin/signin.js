@@ -1,7 +1,7 @@
 import { render } from 'pug'
-import { template as SigninPage } from '../../components/Form/Form.tmpl'
-import { data as signinData } from './data'
+import { template as SignInPage } from '../../components/Form/Form.tmpl'
+import { data as signInData } from './data'
 
-export default function Signin() {
-  return render(SigninPage(signinData))
+export default function SignIn() {
+  return render(SignInPage(signInData))
 }

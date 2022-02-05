@@ -1,30 +1,37 @@
 import { render } from './utils/render'
-import { signin } from './pages/signin'
-import { signup } from './pages/signup'
+import { signIn } from './pages/signIn'
+import { signUp } from './pages/signUp'
+import { notFound } from './pages/404'
+import { serverError } from './pages/500'
 
 import './styles/index.scss'
 
 function init() {
-  const { pathname } = window.location;
-  const Signin = signin()
-  const Signup = signup()
+  const { pathname } = window.location
+  const SignIn = signIn()
+  const SignUp = signUp()
+  const NotFound = notFound()
+  const ServerError = serverError()
 
   switch (pathname) {
     case '/':
     case '/signin':
-      render(Signin)
+      render(SignIn)
       return
     case '/signup':
-      render(Signup)
+      render(SignUp)
       return
     case '/chats':
-      render(Signin)
+      render('<div>chats</div>')
       return
     case '/profile':
-      render(Signin)
+      render('<div>profile</div>')
       return
+    case '/500':
+      render(ServerError)
+      return  
     default:
-      render('<div>404</div>')
+      render(NotFound)
       return
   }
 }

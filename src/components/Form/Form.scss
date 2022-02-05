@@ -16,22 +16,6 @@
     margin: 0 20px 50px;
     letter-spacing: 1px;
   }
-
-  .form__link {
-    color: $button;
-    text-decoration: none;
-    display: block;
-    margin: 0 auto;
-    width: fit-content;
-    text-transform: uppercase;
-    font-size: 14px;
-    transition: transform linear .3s;
-    letter-spacing: 1px;
-
-    &:hover {
-      transform: translateY(-1px);
-    }
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -42,10 +26,6 @@
 
     .form__title {
       margin: 20px 20px 30px;
-    }  
-
-    .form__link {
-      margin: 0 auto 70px;
     }  
   }  
 }
