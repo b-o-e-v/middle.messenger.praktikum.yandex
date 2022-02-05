@@ -10,6 +10,6 @@ export const template = ({
 }) => {
   return `
     .input.input_name_${name}
-      label.input__title(for='${name}') ${title}
+      label.input__title(for='${name}') ${title}:
       input.input__record(name='${name}' id='${name}' required='${required}' type='${type}' ${disabled ? 'disabled' : ''} value='${value}')`
 }

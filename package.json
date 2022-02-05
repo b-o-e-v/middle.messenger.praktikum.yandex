@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "parcel ./static/index.html --open --port 3000",
-    "build": "parcel build ./static/index.html",
-    "start": "parcel build ./static/index.html & node ./server.js"
+    "dev": "rm -r dist & parcel ./static/index.html --open --port 3000",
+    "build": "rm -r dist & parcel build ./static/index.html",
+    "start": "npm run build & node ./server.js"
   },
   "repository": {
     "type": "git",

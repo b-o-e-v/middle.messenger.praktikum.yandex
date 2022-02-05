@@ -23,6 +23,6 @@ export const data = {
   },
   link: {
     text: 'SIGN UP',
-    url: '/register'
+    url: '/signup'
   }
 }

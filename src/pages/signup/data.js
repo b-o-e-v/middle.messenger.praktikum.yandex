@@ -47,6 +47,6 @@ export const data = {
   },
   link: {
     text: 'SIGN IN',
-    url: '/login'
+    url: '/signin'
   }
 }

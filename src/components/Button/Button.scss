@@ -1,10 +1,26 @@
 @import "../../styles/colors.scss";
 
+@keyframes shadow {
+  from {
+    width: 150px;
+    letter-spacing: 1px;
+  }
+  50% {
+    width: 170px;
+    letter-spacing: 3px;
+  }
+  to {
+    width: 150px;
+    letter-spacing: 1px;
+  }
+}
+
 .button {
   display: block;
   width: 150px;
   height: 45px;
   border: none;
+  letter-spacing: 1px;
   border-radius: 35px;
   background-color: $button;
   box-shadow: 0px 5px 10px $shadow;
@@ -12,9 +28,21 @@
   margin: 60px auto 30px;
   padding: 0;
   cursor: pointer;
-  transition: background-color linear .2s;
+  transition:
+    background-color linear .2s,
+    color linear .2s;
 
   &:hover {
-    background-color: #cbcb00;
+    animation: shadow  1s infinite ease-in-out;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .button {
+    margin: 35px auto 30px;
+
+    &:hover {
+      animation: none;
+    }  
   }
 }

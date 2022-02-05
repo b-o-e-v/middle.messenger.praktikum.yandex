@@ -1,27 +1,27 @@
 import { render } from './utils/render'
-import { login } from './pages/login'
-import { register } from './pages/register'
+import { signin } from './pages/signin'
+import { signup } from './pages/signup'
 
 import './styles/index.scss'
 
 function init() {
   const { pathname } = window.location;
-  const Login = login()
-  const Register = register()
+  const Signin = signin()
+  const Signup = signup()
 
   switch (pathname) {
     case '/':
-    case '/login':
-      render(Login)
+    case '/signin':
+      render(Signin)
       return
-    case '/register':
-      render(Register)
+    case '/signup':
+      render(Signup)
       return
     case '/chats':
-      render(Login)
+      render(Signin)
       return
     case '/profile':
-      render(Login)
+      render(Signin)
       return
     default:
       render('<div>404</div>')
