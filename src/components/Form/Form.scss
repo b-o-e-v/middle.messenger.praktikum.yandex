@@ -19,7 +19,6 @@
       width: 130px;
       height: 130px;
       position: relative;
-      overflow: hidden;
       background-color: $text_light;
       cursor: pointer;
 
@@ -29,10 +28,12 @@
         background-image: url('../../../static/image/union.svg');
         background-position: center;
         background-repeat: no-repeat;
+        border-radius: 50%;
+        overflow: hidden;
       }
 
-      &::after {
-        content: "Сhange avatar";
+      .form__load-label-avatar {
+        cursor: pointer;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -46,7 +47,11 @@
         transition: opacity linear .3s;
       }
 
-      &:hover::after {
+      .form__load {
+        opacity: 0;
+      }
+
+      .form__load-label-avatar:hover {
         opacity: 0.7;
       }
     }

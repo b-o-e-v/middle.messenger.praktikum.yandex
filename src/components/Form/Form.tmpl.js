@@ -10,7 +10,9 @@ export const template = ({ form, inputs, buttons, link, avatar }) => (`
   form#${form.id}
     .form__header
       ${avatar ? `.form__avatar
-        img.form__img(src='${avatar.src}')` : ''}
+        img.form__img(src='${avatar.src}')
+        label.form__load-label-avatar(for='${avatar.id}') Сhange avatar
+        input.form__load(type='file' id='${avatar.id}' name='${avatar.name}')` : ''}
       h1.form__title ${form.title}
     .inputs
       ${inputs.map((input) => Input(input)).join(' ')}

@@ -1,8 +1,8 @@
 import render from '../../utils/render'
 import eventListener from '../../utils/eventListener'
 import { template as ProfilePage } from '../../components/Form/Form.tmpl'
-import { data as profileData } from './data'
-import { data as passwordData } from './password'
+import { data as profileData } from './dataFormUser'
+import { data as passwordData } from './dataFormPassword'
 
 export default function Profile() {
   const goback = () => {
@@ -28,3 +28,4 @@ export default function Profile() {
 
   return { content: ProfilePage(profileData), cb }
 }
+

@@ -3,7 +3,10 @@ export const data = {
     id: 'changedata',
     title: 'Display Name'
   },
-  avatar: {},
+  avatar: {
+    name: 'avatar',
+    id: 'load_avatar'
+  },
   inputs: [
     {
       title: 'first name',

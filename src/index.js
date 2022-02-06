@@ -2,6 +2,7 @@ import render from './utils/render'
 import { signIn } from './pages/signIn'
 import { signUp } from './pages/signUp'
 import { profile } from './pages/profile'
+import { chats } from './pages/chats'
 import { notFound } from './pages/404'
 import { serverError } from './pages/500'
 
@@ -12,6 +13,7 @@ function init() {
   const SignIn = signIn()
   const SignUp = signUp()
   const Profile = profile()
+  const Chats = chats()
   const NotFound = notFound()
   const ServerError = serverError()
 
@@ -24,7 +26,7 @@ function init() {
       render(SignUp)
       return
     case '/chats':
-      render('.div')
+      render(Chats)
       return
     case '/profile':
       render(Profile)
