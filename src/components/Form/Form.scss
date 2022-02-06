@@ -8,6 +8,7 @@
 
   .form__header {
     max-width: 470px;
+    width: 85vw;
     margin: 0 auto 35px;
     display: flex;
     justify-content: center;
@@ -48,6 +49,7 @@
       }
 
       .form__load {
+        width: 0;
         opacity: 0;
       }
 
