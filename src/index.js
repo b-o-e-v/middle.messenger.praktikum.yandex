@@ -1,6 +1,7 @@
-import { render } from './utils/render'
+import render from './utils/render'
 import { signIn } from './pages/signIn'
 import { signUp } from './pages/signUp'
+import { profile } from './pages/profile'
 import { notFound } from './pages/404'
 import { serverError } from './pages/500'
 
@@ -10,6 +11,7 @@ function init() {
   const { pathname } = window.location
   const SignIn = signIn()
   const SignUp = signUp()
+  const Profile = profile()
   const NotFound = notFound()
   const ServerError = serverError()
 
@@ -22,10 +24,10 @@ function init() {
       render(SignUp)
       return
     case '/chats':
-      render('<div>chats</div>')
+      render('.div')
       return
     case '/profile':
-      render('<div>profile</div>')
+      render(Profile)
       return
     case '/500':
       render(ServerError)

@@ -5,11 +5,16 @@ import { template as Link } from '../Link/Link.tmpl'
 
 import './Form.scss'
 
-export const template = ({ form, inputs, button, link }) => (`
+export const template = ({ form, inputs, buttons, link, avatar }) => (`
 .form
-  h1.form__title ${form.title}
-  form#form__${form.id}
-    ${inputs.map((data) => Input(data)).join(' ')}
-    ${Button(button)}
-  ${link ? Link(link) : ''}
+  form#${form.id}
+    .form__header
+      ${avatar ? `.form__avatar
+        img.form__img(src='${avatar.src}')` : ''}
+      h1.form__title ${form.title}
+    .inputs
+      ${inputs.map((input) => Input(input)).join(' ')}
+    .buttons
+      ${buttons.map((button) => Button(button)).join(' ')}
+    ${link ? Link(link) : ''}
 `)

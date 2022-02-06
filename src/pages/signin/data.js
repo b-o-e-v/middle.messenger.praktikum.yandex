@@ -17,10 +17,12 @@ export const data = {
       required: true
     }
   ],
-  button: {
-    text: 'SIGN IN',
-    type: 'submit'
-  },
+  buttons: [
+    {
+      text: 'SIGN IN',
+      type: 'submit',
+    }
+  ],
   link: {
     text: 'SIGN UP',
     url: '/signup'

@@ -1,7 +1,14 @@
-import { render } from 'pug'
 import { template as SignInPage } from '../../components/Form/Form.tmpl'
+import { getData } from '../../utils/getData'
 import { data as signInData } from './data'
 
 export default function SignIn() {
-  return render(SignInPage(signInData))
+  const cb = () => {
+    document.getElementById('signin').onsubmit = (e) => {
+      e.preventDefault()
+      getData(e.target, signInData.inputs)
+    }
+  }
+
+  return { content: SignInPage(signInData), cb }
 }

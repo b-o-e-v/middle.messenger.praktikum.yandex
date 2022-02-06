@@ -1,5 +1,9 @@
-export function render(content) {
-  const root = document.querySelector('#root');
-  if (root) root.innerHTML = content
-  return root;
+import { render } from 'pug'
+
+export default function renderDOM({ content, cb, query = '#root' }) {
+  const root = document.querySelector(query)
+  if (root) {
+    root.innerHTML = render(content)
+    cb && cb()
+  }
 }

@@ -41,10 +41,12 @@ export const data = {
       required: true
     }
   ],
-  button: {
-    text: 'SIGN UP',
-    type: 'submit'
-  },
+  buttons: [
+    {
+      text: 'SIGN UP',
+      type: 'submit'
+    }
+  ],
   link: {
     text: 'SIGN IN',
     url: '/signin'
