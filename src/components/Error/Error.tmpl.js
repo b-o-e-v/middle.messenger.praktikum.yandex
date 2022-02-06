@@ -1,5 +1,5 @@
 // КОМПОНЕНТЫ
-import { template as Link } from '../Link/Link.tmpl'
+import Link from '../Link/Link.tmpl'
 
 import './Error.scss'
 

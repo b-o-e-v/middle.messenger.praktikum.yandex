@@ -1,8 +1,8 @@
 import render from '../../utils/render'
 import eventListener from '../../utils/eventListener'
-import { template as ProfilePage } from '../../components/Form/Form.tmpl'
-import { data as profileData } from './dataFormUser'
-import { data as passwordData } from './dataFormPassword'
+import ProfilePage from '../../components/Form/Form.tmpl'
+import profileData from './dataFormUser'
+import passwordData from './dataFormPassword'
 
 export default function Profile() {
   const goback = () => {
@@ -13,10 +13,13 @@ export default function Profile() {
 
   const cb = () => {
     eventListener('.empty.blue.data', () => {
-      profileData.inputs.forEach((el) => el.disabled = false)
+      profileData.inputs.forEach((input) => {
+        // eslint-disable-next-line no-param-reassign
+        input.disabled = false
+      })
       profileData.buttons = [
         { text: 'Go back', className: '.empty.blue.goback', type: 'button' },
-        { text: 'Сhange data', type: 'submit' }
+        { text: 'Сhange data', type: 'submit' },
       ]
       render({ content: ProfilePage(profileData), cb: goback })
     })
@@ -28,4 +31,3 @@ export default function Profile() {
 
   return { content: ProfilePage(profileData), cb }
 }
-

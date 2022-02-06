@@ -1,40 +1,40 @@
-export const data = {
+export default {
   form: {
     id: 'changepassword',
-    title: 'Display Name'
+    title: 'Display Name',
   },
   avatar: {
-    src: ''
+    src: '',
   },
   inputs: [
     {
       title: 'old password',
       name: 'oldPassword',
       type: 'password',
-      required: true
+      required: true,
     },
     {
       title: 'new password',
       name: 'newPassword',
       type: 'password',
-      required: true
+      required: true,
     },
     {
       title: 'repeat new password',
       name: 'repeat_newPassword',
       type: 'password',
-      required: true
-    }
+      required: true,
+    },
   ],
   buttons: [
-    { 
+    {
       text: 'Go back',
       className: '.empty.blue.goback',
-      type: 'button'
+      type: 'button',
     },
     {
       text: 'Change password',
-      type: 'submit'
-    }
-  ]
+      type: 'submit',
+    },
+  ],
 }

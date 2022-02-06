@@ -1,5 +1,5 @@
-import { template as SignInPage } from '../../components/Form/Form.tmpl'
-import { getData } from '../../utils/getData'
+import SignInPage from '../../components/Form/Form.tmpl'
+import getData from '../../utils/getData'
 import { data as signInData } from './data'
 
 export default function SignIn() {

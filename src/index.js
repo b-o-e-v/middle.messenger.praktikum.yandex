@@ -33,10 +33,9 @@ function init() {
       return
     case '/500':
       render(ServerError)
-      return  
+      return
     default:
       render(NotFound)
-      return
   }
 }
 

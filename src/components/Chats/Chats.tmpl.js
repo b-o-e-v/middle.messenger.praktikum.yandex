@@ -1,6 +1,6 @@
 import './Chats.scss'
 
-export const template = ({ }) => (`
+export default () => `
 .chats
   .chat__contacts
     .chat__contact
@@ -8,4 +8,4 @@ export const template = ({ }) => (`
     .chat__window
       .chat__header
     textarea.chat__message(name='message')
-`)
+`

@@ -1,5 +1,3 @@
 import './Link.scss'
 
-export const template = ({ url = '#', text }) => {
-  return `a.link(href='${url}') ${text}`
-}
+export default ({ url = '#', text }) => `a.link(href='${url}') ${text}`

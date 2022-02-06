@@ -1,6 +1,4 @@
 import './Button.scss'
 
-export const template = ({ className = '', text, type = 'button' }) => {
-  return `
+export default ({ className = '', text, type = 'button' }) => `
       button.button${className}(type='${type}') ${text}`
-}
