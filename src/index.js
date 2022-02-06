@@ -1,6 +1,6 @@
 import render from './utils/render'
-import { signIn } from './pages/signIn'
-import { signUp } from './pages/signUp'
+import { signIn } from './pages/signin'
+import { signUp } from './pages/signup'
 import { profile } from './pages/profile'
 import { chats } from './pages/chats'
 import { notFound } from './pages/404'
