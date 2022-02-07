@@ -4,9 +4,9 @@
 
 Ссылка на [figma](https://www.figma.com/file/TLC6aQggQus6r9cshtwNth/messenger?node-id=0%3A1) с макетами чата.
 
-Ссылка на [проект](https://loving-jones-92a8b9.netlify.app/) в Netlify 
+Ссылка на [проект](https://zen-wescoff-4c9bbb.netlify.app/) в Netlify 
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d3b35e19-5274-4503-a928-8de6e2c64aa1/deploy-status)](https://app.netlify.com/sites/loving-jones-92a8b9/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/14761201-c8bc-4310-8869-457feab694ff/deploy-status)](https://app.netlify.com/sites/zen-wescoff-4c9bbb/deploys)
 
 ## Downloading
 
