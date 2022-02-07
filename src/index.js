@@ -10,32 +10,26 @@ import './styles/index.scss'
 
 function init() {
   const { pathname } = window.location
-  const SignIn = signIn()
-  const SignUp = signUp()
-  const Profile = profile()
-  const Chats = chats()
-  const NotFound = notFound()
-  const ServerError = serverError()
 
   switch (pathname) {
     case '/':
     case '/signin':
-      render(SignIn)
+      render(signIn())
       return
     case '/signup':
-      render(SignUp)
+      render(signUp())
       return
     case '/chats':
-      render(Chats)
+      render(chats())
       return
     case '/profile':
-      render(Profile)
+      render(profile())
       return
     case '/500':
-      render(ServerError)
+      render(serverError())
       return
     default:
-      render(NotFound)
+      render(notFound())
   }
 }
 

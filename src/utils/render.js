@@ -1,9 +1,7 @@
 import { render } from 'pug'
 
-export default function renderDOM({ content, cb, query = '#root' }) {
-  const root = document.querySelector(query)
-  if (root) {
-    root.innerHTML = render(content)
-    if (cb) cb()
-  }
+export default function renderDOM({ content, cb }) {
+  const root = document.querySelector('#root')
+  root.innerHTML = render(content)
+  cb?.()
 }

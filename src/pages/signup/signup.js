@@ -1,12 +1,12 @@
 import SignUpPage from '../../components/Form/Form.tmpl'
 import getData from '../../utils/getData'
-import { data as signUpData } from './data'
+import signUpData, { inputsData } from './data'
 
 export default function SignUp() {
   const cb = () => {
     document.getElementById('signup').onsubmit = (e) => {
       e.preventDefault()
-      getData(e.target, signUpData.inputs)
+      getData(e.target, inputsData)
     }
   }
 
