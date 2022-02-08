@@ -1,0 +1,21 @@
+.error {
+  .error__number {
+    text-align: center;
+    font-size: 220px;
+    margin: 0;
+  }
+
+  .error__text {
+    text-align: center;
+    font-size: 22px;
+    margin: 0 0 70px;
+  } 
+}
+
+@media screen and (max-width: 768px) {
+  .error {
+    .error__number {
+      font-size: 130px;
+    }
+  } 
+}

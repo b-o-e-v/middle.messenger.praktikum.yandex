@@ -1,0 +1,102 @@
+@import "../../styles/colors.scss";
+
+.form {
+  width: 100vw;
+  max-height: 90vh;
+  overflow: scroll;
+  box-sizing: border-box;
+
+  .form__header {
+    max-width: 470px;
+    width: 85vw;
+    margin: 0 auto 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .form__avatar {
+      border-radius: 50%;
+      margin-right: 30px;
+      width: 130px;
+      height: 130px;
+      position: relative;
+      background-color: $text_light;
+      cursor: pointer;
+
+      .form__img {
+        width: 100%;
+        height: 100%;
+        background-image: url('../../../static/image/union.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+
+      .form__load-label-avatar {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: $background;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        transition: opacity linear .3s;
+      }
+
+      .form__load {
+        width: 0;
+        opacity: 0;
+      }
+
+      .form__load-label-avatar:hover {
+        opacity: 0.7;
+      }
+    }
+
+    .form__title {
+      margin: 0;
+      font-size: 45px;
+      font-weight: 500;
+      text-align: center;
+      letter-spacing: 1px;
+      max-width: 70%;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .form {
+    padding: 20px 20px 50px;
+    border-left: none;
+    border-right: none;
+
+    .form__header {
+      flex-direction: column;
+
+      .form__avatar {
+        width: 150px;
+        height: 150px;
+        margin-right: 0;
+      }
+      
+      .form__title {
+        font-size: 40px;
+        margin: 25px 0 0;
+        max-width: 90%;
+      }  
+    }
+  }  
+}

@@ -1,0 +1,36 @@
+{
+  "name": "middle.messenger.praktikum.yandex",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "parcel ./static/index.html --open --port 3000",
+    "build": "parcel build ./static/index.html",
+    "start": "npm run build & node ./server.js",
+    "lint": "eslint --debug src/",
+    "fix": "npm run lint -- --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/b-o-e-v/middle.messenger.praktikum.yandex.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/b-o-e-v/middle.messenger.praktikum.yandex/issues"
+  },
+  "homepage": "https://github.com/b-o-e-v/middle.messenger.praktikum.yandex#readme",
+  "devDependencies": {
+    "@parcel/transformer-pug": "^2.2.1",
+    "@parcel/transformer-sass": "^2.2.1",
+    "eslint": "^8.8.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "express": "^4.17.2",
+    "parcel": "^2.2.1"
+  },
+  "dependencies": {
+    "pug": "^3.0.2"
+  }
+}
