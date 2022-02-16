@@ -1,15 +1,15 @@
 @import "../../styles/colors.scss";
 
 .link {
-  color: $button;
-  text-decoration: none;
   display: block;
+  width: fit-content;
   margin: 0 auto;
-  width: fit-content;  
-  text-transform: uppercase;
+  color: $button;
   font-size: 14px;
-  transition: transform linear .3s;
   letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: transform linear 0.3s;
 
   &:hover {
     transform: translateY(-1px);
@@ -19,5 +19,5 @@
 @media screen and (max-width: 768px) {
   .link {
     margin: 0 auto 70px;
-  }  
+  }
 }

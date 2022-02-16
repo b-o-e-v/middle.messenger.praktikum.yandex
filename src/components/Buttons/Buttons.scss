@@ -3,19 +3,19 @@
 .button {
   display: block;
   width: fit-content;
-  height: 45px;
   width: 200px;
-  border: none;
-  letter-spacing: 1px;
-  border-radius: 15px;
-  background-color: $button;
-  box-shadow: 0px 5px 10px $shadow;
-  font-size: 14px;
+  height: 45px;
   margin: 45px auto 35px;
   padding: 0 20px;
-  opacity: .8;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background-color: $button;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px $shadow;
   cursor: pointer;
-  transition: opacity linear .2s;
+  opacity: 0.8;
+  transition: opacity linear 0.2s;
 
   &:hover {
     opacity: 1;
@@ -27,13 +27,13 @@
 }
 
 .empty {
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   background-color: transparent;
   box-shadow: none;
-  text-transform: uppercase;
-  font-size: 14px;
-  transition: transform linear .3s;
-  letter-spacing: 1px;
-  line-height: 1.6;
+  transition: transform linear 0.3s;
 
   &:hover {
     transform: translateY(-1px);
