@@ -1,6 +1,7 @@
 import { render } from 'pug'
 
 import IComponentProps from '../../interfaces/IComponentProps'
+import { Message } from '../../interfaces/IChatsItem'
 import Block from '../Block'
 
 import ChatMessage from '../ChatMessage'
@@ -11,7 +12,7 @@ export default class ChatMessages extends Block {
       attributes: {
         class: 'messages'
       },
-      children: props.items.map((item: any) =>
+      children: props.items.map((item: Message) =>
         new ChatMessage({
           attributes: { class: item.my ? 'chat-message my' : 'chat-message' },
           text: item.content,
@@ -22,7 +23,7 @@ export default class ChatMessages extends Block {
     })
   }
 
-  setItems (items: any[]) {
+  setItems (items: Message[]) {
     this.setProps({
       children: items.map(item =>
         new ChatMessage({

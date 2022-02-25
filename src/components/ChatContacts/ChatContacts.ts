@@ -1,29 +1,19 @@
 import { render } from 'pug'
 
 import IComponentProps from '../../interfaces/IComponentProps'
+import IChatsItem from '../../interfaces/IChatsItem'
 
 import Block from '..//Block'
 import ChatContact from '../ChatContact'
 
 import './ChatContacts.scss'
 
-type ChatItem = {
-    id: number,
-    title: string,
-    message: {
-      content: string,
-      time: string
-    },
-    count: number | string,
-    avatar?: string,
-}
-
 export default class ChatContacts extends Block {
   private handleSelect: (chatId: (string | number)) => {}
   constructor (props?: IComponentProps) {
     super('ul', {
       ...props,
-      children: props?.items.map((item: ChatItem) =>
+      children: props?.items.map((item: IChatsItem) =>
         new ChatContact({
           children: {
             name: item.title,
@@ -50,7 +40,7 @@ export default class ChatContacts extends Block {
 
   setItems (items:[]) {
     this.setProps({
-      children: items.map((item: ChatItem) =>
+      children: items.map((item: IChatsItem) =>
         new ChatContact({
           children: {
             name: item.title,

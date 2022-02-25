@@ -1,6 +1,7 @@
 import { render } from 'pug'
 
 import IComponentProps from '../../interfaces/IComponentProps'
+import IChatsItem from '../../interfaces/IChatsItem'
 import { getFieldsContent } from '../../utils/getFields'
 
 import Block from '../Block'
@@ -15,7 +16,7 @@ import template from './ChatPage.tmpl'
 import './ChatPage.scss'
 
 // для теста
-const contacts: any = [
+const contacts: IChatsItem[] = [
   {
     id: 0,
     title: 'Display Name',
@@ -132,11 +133,11 @@ export default class ChatPage extends Block {
       this.setProps({ chatId })
       this.props.children.header.setProps({
         children: {
-          title: contacts[chatId].title,
+          title: contacts[+chatId].title,
           avatar: 'test'
         }
       })
-      this.props.children.messages.setItems(contacts[chatId].messages)
+      this.props.children.messages.setItems(contacts[+chatId].messages)
     })
   }
 

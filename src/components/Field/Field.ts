@@ -46,7 +46,7 @@ export default class Field extends Block implements IComponentProps {
         blur: ({ currentTarget }: { currentTarget: HTMLInputElement }) => {
           const validity = currentTarget.validity
 
-          const valid = validity && this.checkValid(validity)
+          const valid = validity && this.checkValid(validity, currentTarget.type)
           valid && this.setError(valid)
         }
       }
