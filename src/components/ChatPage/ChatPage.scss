@@ -32,8 +32,13 @@
 
   .messages {
     height: 87%;
+    overflow: scroll;
     background-color: $text_light;
     border-top-right-radius: 30px;
+
+    ::-webkit-scrollbar {
+      width: 0;
+    }
   }
 
   .message__container {
