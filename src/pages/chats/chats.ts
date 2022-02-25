@@ -1,5 +1,3 @@
-import ChatsPage from '../../components/Chats/Chats.tmpl'
+import ChatPage from '../../components/ChatPage'
 
-export default function ServerError () {
-  return { content: ChatsPage() }
-}
+export default new ChatPage({})

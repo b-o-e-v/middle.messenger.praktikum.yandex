@@ -10,7 +10,7 @@ import template from './FormPage.tmpl'
 
 import './FormPage.scss'
 
-export default class Signin extends Block {
+export default class FormPage extends Block {
   constructor (props?: IComponentProps) {
     super('div', {
       ...props,

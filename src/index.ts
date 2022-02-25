@@ -1,5 +1,6 @@
 import SignIn from './pages/signin'
 import SignUp from './pages/signup'
+import Chats from './pages/chats'
 import Profile from './pages/profile'
 import Data from './pages/profile/edit/data'
 import Password from './pages/profile/edit/password'
@@ -16,28 +17,28 @@ function init () {
   switch (pathname) {
     case '/':
     case '/signin':
-      render('#root', SignIn)
+      render(SignIn)
       return
     case '/signup':
-      render('#root', SignUp)
+      render(SignUp)
       return
-    // case '/chats':
-    //   render(chats())
-    //   return
+    case '/chats':
+      render(Chats)
+      return
     case '/profile':
-      render('#root', Profile)
+      render(Profile)
       return
     case '/profile/edit/data':
-      render('#root', Data)
+      render(Data)
       return
     case '/profile/edit/password':
-      render('#root', Password)
+      render(Password)
       return
     case '/500':
-      render('#root', ServerError)
+      render(ServerError)
       return
     default:
-      render('#root', NotFoundError)
+      render(NotFoundError)
   }
 }
 

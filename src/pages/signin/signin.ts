@@ -34,7 +34,7 @@ export default new FormPage({
       events: {
         click: () => {
           history.pushState({}, '', '/signup')
-          renderDom('#root', SignUp)
+          renderDom(SignUp)
         }
       }
     })

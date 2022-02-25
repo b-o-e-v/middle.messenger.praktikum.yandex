@@ -26,7 +26,7 @@ export default new FormPage({
           events: {
             click: () => {
               history.pushState({}, '', '/profile')
-              renderDom('#root', Profile)
+              renderDom(Profile)
             }
           }
         }),

@@ -3,7 +3,7 @@ import renderDom from '../../utils/render'
 import Error from '../../components/Error'
 import Button from '../../components/Button'
 
-import SignUp from '../signup'
+import Chats from '../chats'
 
 export default new Error({
   children: {
@@ -15,7 +15,7 @@ export default new Error({
       events: {
         click: () => {
           history.pushState({}, '', '/chats')
-          renderDom('#root', SignUp)
+          renderDom(Chats)
         }
       }
     })

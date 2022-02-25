@@ -25,6 +25,6 @@ export default class Form extends Block implements IComponentProps {
   }
 
   render () {
-    return render(template, getFieldsContent(this.props.children))
+    return render(this.props.template || template, getFieldsContent(this.props.children))
   }
 }

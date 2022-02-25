@@ -159,6 +159,18 @@ export default (fields: string[], disabled?: boolean) => {
           name: 'repeatNewPassword'
         }
       }
+    }),
+    message: new Field({
+      input: {
+        label: 'message',
+        attributes: {
+          class: 'message__input',
+          id: 'message',
+          required: true,
+          disabled,
+          name: 'message'
+        }
+      }
     })
   }
 

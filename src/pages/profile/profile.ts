@@ -3,7 +3,6 @@ import renderDom from '../../utils/render'
 import FormPage from '../../components/FormPage'
 import Form from '../../components/Form'
 import Button from '../../components/Button'
-
 import Data from './edit/data'
 import Password from './edit/password'
 import SignIn from '../signin'
@@ -28,7 +27,7 @@ export default new FormPage({
       events: {
         click: () => {
           history.pushState({}, '', '/profile/edit/data')
-          renderDom('#root', Data)
+          renderDom(Data)
         }
       }
     }),
@@ -38,7 +37,7 @@ export default new FormPage({
       events: {
         click: () => {
           history.pushState({}, '', '/profile/edit/password')
-          renderDom('#root', Password)
+          renderDom(Password)
         }
       }
     }),
@@ -51,7 +50,7 @@ export default new FormPage({
       events: {
         click: () => {
           history.pushState({}, '', '/signin')
-          renderDom('#root', SignIn)
+          renderDom(SignIn)
         }
       }
     })
