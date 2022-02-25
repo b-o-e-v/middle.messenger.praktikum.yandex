@@ -1,5 +1,7 @@
 Фронтенд часть онлайн чата «Веб-мессенджер», написанного на нативном js. 
 
+Ссылка на [PULL REQUEST](https://github.com/b-o-e-v/middle.messenger.praktikum.yandex/pull/2)
+
 Ссылка на [figma](https://www.figma.com/file/TLC6aQggQus6r9cshtwNth/messenger?node-id=0%3A1) с макетами чата.
 
 Ссылка на [проект](https://zen-wescoff-4c9bbb.netlify.app/) в Netlify 
