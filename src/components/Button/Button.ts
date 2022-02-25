@@ -5,7 +5,7 @@ import { IButtonProps } from '../../interfaces/IButtonProps'
 
 import Block from '../Block'
 
-import './button.scss'
+import './Button.scss'
 
 export default class Button extends Block implements IButtonProps {
   constructor ({ link, ...props }: IButtonProps) {
