@@ -5,6 +5,7 @@
 Ссылка на [проект](https://zen-wescoff-4c9bbb.netlify.app/) в Netlify 
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/14761201-c8bc-4310-8869-457feab694ff/deploy-status)](https://app.netlify.com/sites/zen-wescoff-4c9bbb/deploys)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 
 ## Downloading
 

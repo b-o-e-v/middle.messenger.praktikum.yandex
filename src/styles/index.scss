@@ -2,14 +2,22 @@
 @import "./fonts.scss";
 
 body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100vw;
   height: 100vh;
   margin: 0;
   overflow: hidden;
-  background-color: $background;
-  font-family: 'Lato';
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: $text_light;
+  font-family: Lato, Arial, Helvetica, sans-serif;
+  background-color: $background;
+}
+
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
 }

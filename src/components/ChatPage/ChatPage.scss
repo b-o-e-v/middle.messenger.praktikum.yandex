@@ -1,0 +1,56 @@
+@import "../../styles/colors.scss";
+
+.chat {
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  height: 90vh;
+  overflow: hidden;
+  color: $text_dark;
+
+  .controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 20px;
+  }
+
+  .contacts {
+    width: 25%;
+    background-color: $text_light;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 73%;
+  }
+
+  .messages {
+    height: 87%;
+    background-color: $text_light;
+    border-top-right-radius: 30px;
+  }
+
+  .message__container {
+    width: 100%;
+    height: 11%;
+    background-color: $text_light;
+    border-bottom-right-radius: 30px;
+  }
+
+  .createChat {
+    width: 40px;
+    height: 40px;
+    margin: 0 0 0 auto;
+    padding: 0;
+    color: $background;
+    font-weight: bolder;
+    font-size: 20px;
+    border-radius: 50%;
+  }
+}
