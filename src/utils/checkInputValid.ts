@@ -2,7 +2,6 @@ export default function checkInputValid (validity: ValidityState, type?: string)
   const error = (isError: boolean, errorText: string) => {
     return { isError, errorText }
   }
-  console.log(type)
   if (validity.valid) {
     return error(false, '')
   } else if (validity.valueMissing) {
