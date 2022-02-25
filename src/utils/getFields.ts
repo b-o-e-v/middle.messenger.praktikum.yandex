@@ -62,11 +62,12 @@ export default (fields: string[], disabled?: boolean) => {
         label: 'login',
         attributes: {
           id: 'login',
-          minlength: '1',
-          maxlength: '50',
+          minlength: '3',
+          maxlength: '20',
           required: true,
           disabled,
-          name: 'login'
+          name: 'login',
+          pattern: '[a-zA-Z0-9-_]{3,20}'
         }
       }
     }),
@@ -90,8 +91,8 @@ export default (fields: string[], disabled?: boolean) => {
         label: 'phone',
         attributes: {
           id: 'phone',
-          minlength: '1',
-          maxlength: '50',
+          minlength: '10',
+          maxlength: '15',
           required: true,
           disabled,
           name: 'phone',
@@ -107,11 +108,12 @@ export default (fields: string[], disabled?: boolean) => {
           class: 'field__input',
           id: 'password',
           type: 'password',
-          minlength: '1',
-          maxlength: '50',
+          minlength: '8',
+          maxlength: '40',
           required: true,
           disabled,
-          name: 'password'
+          name: 'password',
+          pattern: '(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{8,}'
         }
       }
     }),
@@ -122,11 +124,12 @@ export default (fields: string[], disabled?: boolean) => {
           class: 'field__input',
           id: 'oldPassword',
           type: 'password',
-          minlength: '1',
-          maxlength: '50',
+          minlength: '8',
+          maxlength: '40',
           required: true,
           disabled,
-          name: 'oldPassword'
+          name: 'oldPassword',
+          pattern: '(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{8,}'
         }
       }
     }),
@@ -137,11 +140,12 @@ export default (fields: string[], disabled?: boolean) => {
           class: 'field__input',
           id: 'newPassword',
           type: 'password',
-          minlength: '1',
-          maxlength: '50',
+          minlength: '8',
+          maxlength: '40',
           required: true,
           disabled,
-          name: 'newPassword'
+          name: 'newPassword',
+          pattern: '(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{8,}'
         }
       }
     }),
@@ -152,11 +156,12 @@ export default (fields: string[], disabled?: boolean) => {
           class: 'field__input',
           id: 'repeat-new-password',
           type: 'password',
-          minlength: '1',
-          maxlength: '20',
+          minlength: '8',
+          maxlength: '40',
           required: true,
           disabled,
-          name: 'repeatNewPassword'
+          name: 'repeatNewPassword',
+          pattern: '(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{8,}'
         }
       }
     }),
