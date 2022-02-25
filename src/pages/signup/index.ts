@@ -1,1 +1,1 @@
-export { default as signUp } from './signup'
+export { default } from './signup'

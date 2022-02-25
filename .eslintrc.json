@@ -1,18 +1,27 @@
 {
-  "env": {
-    "browser": true,
-    "es2021": true
-  },
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
   "extends": [
-    "airbnb-base"
+    "prettier",
+    "standard",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
   "parserOptions": {
-    "ecmaVersion": "latest",
+    "ecmaVersion": 12,
     "sourceType": "module"
   },
   "rules": {
-    "quotes": [1, "single"],
-    "semi": ["error", "never"],
-    "import/prefer-default-export": "off"
+    "no-unused-vars": "off",
+    "quotes": [2, "single"],
+    "semi": "off",
+    "@typescript-eslint/semi": [2, "never"],
+    "max-len": [2, 100],
+    "no-empty-function": "off",
+    "@typescript-eslint/no-empty-function": "off"
   }
 }

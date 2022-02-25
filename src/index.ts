@@ -1,35 +1,43 @@
+import SignIn from './pages/signin'
+import SignUp from './pages/signup'
+import Profile from './pages/profile'
+import Data from './pages/profile/edit/data'
+import Password from './pages/profile/edit/password'
+import ServerError from './pages/500'
+import NotFoundError from './pages/404'
+
 import render from './utils/render'
-import { signIn } from './pages/signin'
-import { signUp } from './pages/signup'
-import { profile } from './pages/profile'
-import { chats } from './pages/chats'
-import { notFound } from './pages/404'
-import { serverError } from './pages/500'
 
 import './styles/index.scss'
 
-function init() {
+function init () {
   const { pathname } = window.location
 
   switch (pathname) {
     case '/':
     case '/signin':
-      render(signIn())
+      render('#root', SignIn)
       return
     case '/signup':
-      render(signUp())
+      render('#root', SignUp)
       return
-    case '/chats':
-      render(chats())
-      return
+    // case '/chats':
+    //   render(chats())
+    //   return
     case '/profile':
-      render(profile())
+      render('#root', Profile)
+      return
+    case '/profile/edit/data':
+      render('#root', Data)
+      return
+    case '/profile/edit/password':
+      render('#root', Password)
       return
     case '/500':
-      render(serverError())
+      render('#root', ServerError)
       return
     default:
-      render(notFound())
+      render('#root', NotFoundError)
   }
 }
 

@@ -1,34 +1,59 @@
-import render from '../../utils/render'
-import Inputs from '../../components/Inputs/Inputs.tmpl'
-import Buttons from '../../components/Buttons/Buttons.tmpl'
-import ProfilePage from '../../components/Form/Form.tmpl'
-import profileData, { inputsData } from './dataFormUser'
-import passwordData from './dataFormPassword'
+import renderDom from '../../utils/render'
 
-export default function Profile() {
-  const goback = () => {
-    document.querySelector('.empty.blue.goback')?.addEventListener('click', () => {
-      document.location.href = '/profile'
+import FormPage from '../../components/FormPage'
+import Form from '../../components/Form'
+import Button from '../../components/Button'
+
+import Data from './edit/data'
+import Password from './edit/password'
+import SignIn from '../signin'
+
+export default new FormPage({
+  attributes: {
+    class: 'profile'
+  },
+  children: {
+    title: 'Display Name',
+    form: new Form({
+      fields: ['avatar', 'firstName', 'secondName', 'displayName', 'login', 'email', 'phone'],
+      disabled: true,
+      attributes: {
+        name: 'data-form',
+        class: 'form profile-change'
+      }
+    }),
+    changeData: new Button({
+      text: 'change data',
+      link: true,
+      events: {
+        click: () => {
+          history.pushState({}, '', '/profile/edit/data')
+          renderDom('#root', Data)
+        }
+      }
+    }),
+    changePassword: new Button({
+      text: 'change password',
+      link: true,
+      events: {
+        click: () => {
+          history.pushState({}, '', '/profile/edit/password')
+          renderDom('#root', Password)
+        }
+      }
+    }),
+    button: new Button({
+      text: 'Sign out',
+      link: true,
+      attributes: {
+        class: 'red'
+      },
+      events: {
+        click: () => {
+          history.pushState({}, '', '/signin')
+          renderDom('#root', SignIn)
+        }
+      }
     })
   }
-
-  const cb = () => {
-    document.querySelector('.empty.blue.data')?.addEventListener('click', () => {
-      // разблокируем форму смены данных пользователя
-      profileData.inputs = Inputs(inputsData(false))
-      // меняем кнопки
-      profileData.buttons = Buttons([
-        { text: 'Go back', className: '.empty.blue.goback', type: 'button' },
-        { text: 'Сhange data', type: 'submit' },
-      ])
-
-      render({ content: ProfilePage(profileData), cb: goback })
-    })
-
-    document.querySelector('.empty.blue.password')?.addEventListener('click', () => {
-      render({ content: ProfilePage(passwordData), cb: goback })
-    })
-  }
-
-  return { content: ProfilePage(profileData), cb }
-}
+})

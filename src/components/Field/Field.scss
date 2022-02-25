@@ -1,0 +1,93 @@
+@import "../../styles/colors.scss";
+
+.field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 600px;
+  margin: 0 auto 30px;
+  padding: 0;
+  border: none;
+  cursor: text;
+
+  .field__label {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    padding-left: 20px;
+    color: $text_dark;
+    font-size: 14px;
+    line-height: 50px;
+    letter-spacing: 1px;
+    text-align: left;
+    text-transform: uppercase;
+    cursor: inherit;
+    pointer-events: none;
+  }
+
+  .field__error {
+    position: absolute;
+    bottom: -35%;
+    display: block;
+    font-weight: 700;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .field__input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    padding-right: 20px;
+    padding-left: 30%;
+    color: $text_dark;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-align: right;
+    background: $text_light;
+    border: 2px solid $background;
+    border-radius: 15px;
+    outline: none;
+    cursor: inherit;
+
+    &:focus {
+      border-color: $button;
+    }
+
+    &:disabled {
+      cursor: default;
+      opacity: 0.7;
+    }
+
+    &:-webkit-autofill {
+      box-shadow: inset 0 0 0 1000px $text_light;
+    }
+  }
+
+  &.error {
+    .field__input {
+      border-color: $error;
+    }
+
+    .field__label,
+    .field__error {
+      color: $error;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .field {
+    width: 90vw;
+    margin-bottom: 30px;
+
+    .field__input {
+      height: 50px;
+      padding-left: 40%;
+    }
+  }
+}

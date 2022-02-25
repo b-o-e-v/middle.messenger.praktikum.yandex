@@ -1,14 +1,42 @@
-import SignUpPage from '../../components/Form/Form.tmpl'
-import getData from '../../utils/getData'
-import signUpData, { inputsData } from './data'
+import renderDom from '../../utils/render'
 
-export default function SignUp() {
-  const cb = () => {
-    document.getElementById('signup').onsubmit = (e) => {
-      e.preventDefault()
-      getData(e.target, inputsData)
-    }
+import FormPage from '../../components/FormPage'
+import Form from '../../components/Form'
+import Button from '../../components/Button'
+
+import SignIn from '../signin'
+
+export default new FormPage({
+  attributes: {
+    class: 'signup'
+  },
+  children: {
+    title: 'SIGN UP',
+    form: new Form({
+      fields: ['firstName', 'secondName', 'email', 'phone', 'login', 'password'],
+      disabled: false,
+      attributes: {
+        name: 'signup-form',
+        class: 'form'
+      },
+      children: {
+        button: new Button({
+          text: 'SIGN UP',
+          attributes: {
+            type: 'submit'
+          }
+        })
+      }
+    }),
+    button: new Button({
+      text: 'SIGN IN',
+      link: true,
+      events: {
+        click: () => {
+          history.pushState({}, '', '/signin')
+          renderDom('#root', SignIn)
+        }
+      }
+    })
   }
-
-  return { content: SignUpPage(signUpData), cb }
-}
+})
