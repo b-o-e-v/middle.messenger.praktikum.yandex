@@ -8,6 +8,15 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/8da90d0e-f0d6-47c5-8ff2-af04e8cfbd30/deploy-status)](https://app.netlify.com/sites/sharp-curran-77087d/deploys)
 
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
+
+### В данной работе выполнено:
+* Внедрен TypeScript и CodeStyle;
+* Добавлена валидация форм;
+* Добавлен компонентый подход на основе шаблонизатора, блока и EventBus;
+* Подключен шаблонизатор PUG;
+* Настроен Parcel сборки проекта.
+
 ## Downloading
 
 ```
