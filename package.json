@@ -42,6 +42,7 @@
     "path-browserify": "1.0.1",
     "postcss-less": "6.0.0",
     "prettier": "2.5.1",
+    "process": "0.11.10",
     "stylelint": "14.5.3",
     "stylelint-config-prettier": "9.0.3",
     "stylelint-config-rational-order": "0.1.2",
