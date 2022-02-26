@@ -4,9 +4,9 @@
 
 Ссылка на [figma](https://www.figma.com/file/TLC6aQggQus6r9cshtwNth/messenger?node-id=0%3A1) с макетами чата.
 
-Ссылка на [проект](https://zen-wescoff-4c9bbb.netlify.app/) в Netlify 
+Ссылка на [проект](https://sharp-curran-77087d.netlify.app/) в Netlify 
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/14761201-c8bc-4310-8869-457feab694ff/deploy-status)](https://app.netlify.com/sites/zen-wescoff-4c9bbb/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8da90d0e-f0d6-47c5-8ff2-af04e8cfbd30/deploy-status)](https://app.netlify.com/sites/sharp-curran-77087d/deploys)
 
 ## Downloading
 
