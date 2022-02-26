@@ -6,7 +6,7 @@ div.contacts
 div.container
   div.messages
     !=header
-    .messages
+    .messages__scroll
       !=messages
   .message__container
     !=message

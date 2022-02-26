@@ -15,6 +15,9 @@ export default class ChatContacts extends Block {
       ...props,
       children: props?.items.map((item: IChatsItem) =>
         new ChatContact({
+          attributes: {
+            class: 'chat_item'
+          },
           children: {
             name: item.title,
             preview: item.message?.content,

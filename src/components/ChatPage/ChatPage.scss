@@ -32,12 +32,21 @@
 
   .messages {
     height: 87%;
-    overflow: scroll;
     background-color: $text_light;
     border-top-right-radius: 30px;
 
     ::-webkit-scrollbar {
       width: 0;
+    }
+
+    .messages__scroll {
+      height: calc(100% - 80px);
+      overflow: scroll;
+
+      .chat-message__list {
+        margin: 0;
+        padding: 0;
+      }
     }
   }
 

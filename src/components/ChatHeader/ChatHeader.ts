@@ -1,12 +1,10 @@
 import { render } from 'pug'
-import renderDom from '../../utils/render'
 
 import IComponentProps from '../../interfaces/IComponentProps'
 import { getFieldsContent } from '../../utils/getFields'
 
 import Block from '../Block'
 import Button from '../Button'
-import Profile from '../../pages/profile'
 
 import template from './ChatHeader.tmpl'
 
@@ -22,13 +20,8 @@ export default class ChatHeader extends Block {
           text: 'my profile...',
           link: true,
           attributes: {
-            class: 'chat-header__link'
-          },
-          events: {
-            click: () => {
-              history.pushState({}, '', '/profile')
-              renderDom(Profile)
-            }
+            class: 'chat-header__link',
+            href: '/profile'
           }
         })
       }

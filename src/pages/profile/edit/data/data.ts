@@ -1,10 +1,6 @@
-import renderDom from '../../../../utils/render'
-
 import FormPage from '../../../../components/FormPage'
 import Form from '../../../../components/Form'
 import Button from '../../../../components/Button'
-
-import Profile from '../../profile'
 
 export default new FormPage({
   attributes: {
@@ -25,11 +21,8 @@ export default new FormPage({
         goBack: new Button({
           text: 'go back',
           link: true,
-          events: {
-            click: () => {
-              history.pushState({}, '', '/profile')
-              renderDom(Profile)
-            }
+          attributes: {
+            href: '/profile'
           }
         }),
         button: new Button({

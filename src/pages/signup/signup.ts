@@ -1,10 +1,6 @@
-import renderDom from '../../utils/render'
-
 import FormPage from '../../components/FormPage'
 import Form from '../../components/Form'
 import Button from '../../components/Button'
-
-import SignIn from '../signin'
 
 export default new FormPage({
   attributes: {
@@ -31,11 +27,8 @@ export default new FormPage({
     button: new Button({
       text: 'SIGN IN',
       link: true,
-      events: {
-        click: () => {
-          history.pushState({}, '', '/signin')
-          renderDom(SignIn)
-        }
+      attributes: {
+        href: '/signin'
       }
     })
   }

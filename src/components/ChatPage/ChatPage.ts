@@ -104,13 +104,7 @@ export default class ChatPage extends Block {
         contacts: new ChatContacts({
           items: contacts
         }),
-        header: new ChatHeader({
-          events: {
-            click: () => {
-              console.log('click')
-            }
-          }
-        }),
+        header: new ChatHeader({}),
         messages: new ChatMessages({
           items: []
         }),
@@ -119,11 +113,6 @@ export default class ChatPage extends Block {
           text: '+',
           attributes: {
             class: 'createChat'
-          },
-          events: {
-            click: () => {
-              console.log('click')
-            }
           }
         })
       }

@@ -1,5 +1,4 @@
 import { render } from 'pug'
-import clsx from 'clsx'
 
 import { IButtonProps } from '../../interfaces/IButtonProps'
 
@@ -9,11 +8,11 @@ import './Button.scss'
 
 export default class Button extends Block implements IButtonProps {
   constructor ({ link, ...props }: IButtonProps) {
-    super('button', {
+    super(`${link ? 'a' : 'button'}`, {
       ...props,
       attributes: {
         ...props?.attributes,
-        class: clsx({ link, button: !link }, props?.attributes?.class)
+        class: `${link ? 'link' : 'button'} ${props?.attributes?.class}`.trim()
       }
     })
   }

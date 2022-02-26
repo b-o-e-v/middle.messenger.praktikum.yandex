@@ -21,6 +21,9 @@ export default class Form extends Block implements IComponentProps {
   }
 
   isValid () {
+    // HTMLSelectElement.checkValidity()
+    // Метод проверяет, имеет ли элемент какие-либо ограничения и удовлетворяет ли он им.
+    // https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/checkValidity
     return this.element.checkValidity()
   }
 

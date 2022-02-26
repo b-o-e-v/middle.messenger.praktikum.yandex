@@ -27,6 +27,14 @@ class Http {
     return this.request(url, { method: METHOD.DELETE, data })
   }
 
+  private _setURL (url: string, data: {}) {
+    return `${url}?${Object.entries(data)
+      .map(([key, value]: [key: string, value: any]): string => {
+        return `${key}=${value}`
+      })
+      .join('&')}`
+  }
+
   async request<TResponse> (
     url: string,
     options: Options = { method: METHOD.GET }
@@ -37,13 +45,7 @@ class Http {
       const xhr = new XMLHttpRequest()
 
       if (method === METHOD.GET) {
-        if (data) {
-          url = `${url}?${Object.entries(data)
-            .map(([key, value]: [key: string, value: any]): string => {
-              return `${key}=${value}`
-            })
-            .join('&')}`
-        }
+        if (data) url = this._setURL(url, data)
       }
 
       xhr.open(method, url)

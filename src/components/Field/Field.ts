@@ -1,5 +1,4 @@
 import { render } from 'pug'
-import clsx from 'clsx'
 
 import IComponentProps from '../../interfaces/IComponentProps'
 import checkInputValid from '../../utils/checkInputValid'
@@ -24,7 +23,7 @@ export default class Field extends Block implements IComponentProps {
       ...props,
       attributes: {
         ...props?.attributes,
-        class: clsx('field', { error: isError }, props?.attributes?.class)
+        class: `field ${isError ? 'error' : ''} ${props?.attributes?.class}`.trim()
       },
       children: {
         label: new Label({
@@ -61,7 +60,8 @@ export default class Field extends Block implements IComponentProps {
     this.setProps({
       attributes: {
         ...this.props.attributes,
-        class: clsx(this.props.attributes.class.replace('error', '').trim(), { error: isError })
+        class: `${this.props.attributes.class.replace('error', '').trim()} 
+        ${isError ? 'error' : ''}`
       },
       children: { ...this.props.children, error: errorText }
     })
