@@ -23,7 +23,7 @@ export default class Field extends Block implements IComponentProps {
       ...props,
       attributes: {
         ...props?.attributes,
-        class: `field ${isError ? 'error' : ''} ${props?.attributes?.class}`.trim()
+        class: `field ${isError ? 'error' : ''} ${props?.attributes?.class || ''}`.trim()
       },
       children: {
         label: new Label({
@@ -60,7 +60,7 @@ export default class Field extends Block implements IComponentProps {
     this.setProps({
       attributes: {
         ...this.props.attributes,
-        class: `${this.props.attributes.class.replace('error', '').trim()} 
+        class: `${this.props.attributes.class.replace('error', '').trim() || ''} 
         ${isError ? 'error' : ''}`
       },
       children: { ...this.props.children, error: errorText }

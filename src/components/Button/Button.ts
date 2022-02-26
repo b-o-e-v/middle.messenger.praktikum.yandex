@@ -12,7 +12,7 @@ export default class Button extends Block implements IButtonProps {
       ...props,
       attributes: {
         ...props?.attributes,
-        class: `${link ? 'link' : 'button'} ${props?.attributes?.class}`.trim()
+        class: `${link ? 'link' : 'button'} ${props?.attributes?.class || ''}`.trim()
       }
     })
   }
