@@ -28,7 +28,7 @@
   }
 
   &.profile {
-    .form-page__title {
+    .form-page__title:not(.edit_password .form-page__title) {
       margin: 45px 0 35px 160px;
     }
 

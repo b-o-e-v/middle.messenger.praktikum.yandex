@@ -1,4 +1,6 @@
-export default class EventDispatcher {
+import { IEventDispatcher } from '../interfaces/IEventDispatcher'
+
+export default class EventDispatcher implements IEventDispatcher {
   private events = new Set()
 
   constructor (element?: HTMLElement) {

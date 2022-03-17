@@ -4,6 +4,5 @@ export default function getInputValue (form: HTMLFormElement) {
   elements.forEach((el: HTMLInputElement) => {
     if (el.name) data[el.name] = el.value
   })
-  console.log(data)
   return data
 }

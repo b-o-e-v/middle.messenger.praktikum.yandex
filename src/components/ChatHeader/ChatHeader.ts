@@ -6,6 +6,8 @@ import { getFieldsContent } from '../../utils/getFields'
 import Block from '../Block'
 import Button from '../Button'
 
+import Router from '../../modules/router'
+
 import template from './ChatHeader.tmpl'
 
 import './ChatHeader.scss'
@@ -19,9 +21,10 @@ export default class ChatHeader extends Block {
         button: new Button({
           text: 'my profile...',
           link: true,
-          attributes: {
-            class: 'chat-header__link',
-            href: '/profile'
+          events: {
+            click: () => {
+              Router.getInstance().go('/settings')
+            }
           }
         })
       }

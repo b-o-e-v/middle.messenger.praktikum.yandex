@@ -8,7 +8,7 @@ import './Button.scss'
 
 export default class Button extends Block implements IButtonProps {
   constructor ({ link, ...props }: IButtonProps) {
-    super(`${link ? 'a' : 'button'}`, {
+    super('button', {
       ...props,
       attributes: {
         ...props?.attributes,

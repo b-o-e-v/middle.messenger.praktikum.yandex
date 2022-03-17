@@ -1,45 +1,79 @@
-import SignIn from './pages/signin'
-import SignUp from './pages/signup'
-import Chats from './pages/chats'
-import Profile from './pages/profile'
-import Data from './pages/profile/edit/data'
-import Password from './pages/profile/edit/password'
-import ServerError from './pages/500'
-import NotFoundError from './pages/404'
+import SignInPage from './pages/signin'
+import SignUpPage from './pages/signup'
+import ChatsPage from './pages/chats'
+import ProfilePage from './pages/profile'
+import DataPage from './pages/profile/edit/data'
+import PasswordPage from './pages/profile/edit/password'
+import ErrorPage from './pages/error'
 
-import render from './utils/render'
+import Router from './modules/router'
 
 import './styles/index.scss'
 
-function init () {
-  const { pathname } = window.location
+const router = new Router('#root')
 
-  switch (pathname) {
-    case '/':
-    case '/signin':
-      render(SignIn)
-      return
-    case '/signup':
-      render(SignUp)
-      return
-    case '/chats':
-      render(Chats)
-      return
-    case '/profile':
-      render(Profile)
-      return
-    case '/profile/edit/data':
-      render(Data)
-      return
-    case '/profile/edit/password':
-      render(Password)
-      return
-    case '/500':
-      render(ServerError)
-      return
-    default:
-      render(NotFoundError)
-  }
+async function init () {
+  const currentUser = null
+
+  const checkAuth = true
+
+  router
+    .use({
+      pathname: '/', block: SignInPage, props: { user: currentUser }
+    })
+    .use({
+      pathname: '/sign-up', block: SignUpPage, props: { user: currentUser }
+    })
+    .use({
+      pathname: '/messenger',
+      block: ChatsPage,
+      props: {},
+      exact: false,
+      needAuth: true,
+      isAuth: !!currentUser,
+      onUnautorized: checkAuth
+    })
+    .use({
+      pathname: '/settings',
+      block: ProfilePage,
+      exact: false,
+      needAuth: true,
+      isAuth: !!currentUser,
+      onUnautorized: checkAuth
+    })
+    .use({
+      pathname: '/edit-data',
+      block: DataPage,
+      exact: false,
+      needAuth: true,
+      isAuth: !!currentUser,
+      onUnautorized: checkAuth
+    })
+    .use({
+      pathname: '/edit-pass',
+      block: PasswordPage,
+      exact: false,
+      needAuth: true,
+      isAuth: !!currentUser,
+      onUnautorized: checkAuth
+    })
+    .use({
+      pathname: '/500',
+      block: ErrorPage,
+      props: {
+        code: 500,
+        text: 'Oops! Something went wrong...'
+      }
+    })
+    .use({
+      pathname: '/404',
+      block: ErrorPage,
+      props: {
+        code: 404,
+        text: 'Page Not Found!'
+      }
+    })
+    .start()
 }
 
 init()
